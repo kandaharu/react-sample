@@ -1,9 +1,8 @@
 import { VFC } from 'react';
-import { Flex, Box, Grid, IconButton, Skeleton } from '@chakra-ui/react';
+import { Flex, Box, Grid, IconButton } from '@chakra-ui/react';
 import { AttachmentIcon, AddIcon, EditIcon, ViewIcon } from '@chakra-ui/icons';
 import Title from './Title';
-
-const ParagraphSkeleton = () => <Skeleton mb={4} h="1rem" />;
+import SingleImage from './SingleImage';
 
 const Main: VFC = () => (
   <Box mt="6rem" mx="auto">
@@ -15,18 +14,12 @@ const Main: VFC = () => (
         rounded="md"
         p={4}
         shadow="lg"
-        templateColumns="repeat(5, 1fr)"
+        templateColumns="repeat(4, 1fr)"
         gap={6}
       >
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
-        <ParagraphSkeleton />
+        {[...Array(8).keys()].map((_num: number) => (
+          <SingleImage />
+        ))}
       </Grid>
 
       <Box ml={6}>

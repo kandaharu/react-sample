@@ -1,6 +1,6 @@
 import { VFC } from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import Layout from './components/Layout';
+import Layout from './components/layouts/Layout';
 
 const colors = {
   brand: {

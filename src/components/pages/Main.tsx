@@ -1,8 +1,8 @@
 import { VFC } from 'react';
 import { Flex, Box, Grid, IconButton } from '@chakra-ui/react';
 import { AttachmentIcon, AddIcon, EditIcon, ViewIcon } from '@chakra-ui/icons';
-import Title from './Title';
-import SingleImage from './SingleImage';
+import Title from '../layouts/Title';
+import SingleImage from '../parts/SingleImage';
 
 const Main: VFC = () => (
   <Box mt="6rem" mx="auto">

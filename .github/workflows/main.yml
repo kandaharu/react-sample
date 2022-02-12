@@ -2,8 +2,8 @@ name: Push branch
 on: push
 
 jobs:
-  lint:
-    name: lint
+  build:
+    name: build
     runs-on: ubuntu-latest
 
     steps:
@@ -14,3 +14,6 @@ jobs:
 
       - name: Lint
         run: yarn run lint
+
+      - name: Test
+        run: yarn run test

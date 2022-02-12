@@ -17,8 +17,8 @@ const Main: VFC = () => (
         templateColumns="repeat(4, 1fr)"
         gap={6}
       >
-        {[...Array(8).keys()].map((_num: number) => (
-          <SingleImage />
+        {[...Array(8).keys()].map((num: number) => (
+          <SingleImage key={num} />
         ))}
       </Grid>
 

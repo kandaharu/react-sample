@@ -1,4 +1,5 @@
 import { VFC } from 'react';
+import { Redirect, Route, Switch } from 'react-router';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import Layout from './components/layouts/Layout';
 
@@ -24,7 +25,10 @@ const theme = extendTheme({
 });
 const App: VFC = () => (
   <ChakraProvider theme={theme}>
-    <Layout />
+    <Switch>
+      <Route path="/index" component={Layout} />
+      <Redirect to="/index" />
+    </Switch>
   </ChakraProvider>
 );
 
